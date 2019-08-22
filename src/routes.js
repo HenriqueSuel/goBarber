@@ -9,6 +9,7 @@ import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import AppointmentController from './app/controllers/AppointmentController';
 import SheduleController from './app/controllers/SheduleController';
+import NotificationController from './app/controllers/NotificationController';
 
 import authMiddlewares from './app/middlewares/auth';
 
@@ -31,11 +32,16 @@ routes.get('/providers', ProviderController.index);
 // Calendario
 routes.post('/appointments', AppointmentController.store);
 routes.get('/appointments', AppointmentController.index);
+routes.delete('/appointments/:id', AppointmentController.delete);
 
 // Calendario do prestador
 routes.get('/schedule', SheduleController.index);
 
 // Foto
 routes.post('/files', upload.single('file'), FileController.store);
+
+// nodificação
+routes.get('/notifications', NotificationController.index);
+routes.put('/notifications/:id', NotificationController.update);
 
 export default routes;
