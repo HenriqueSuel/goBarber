@@ -29,6 +29,7 @@ routes.get('/providers', ProviderController.index);
 
 // Calendario
 routes.post('/appointments', AppointmentController.store);
+routes.get('/appointments', AppointmentController.index);
 
 // Foto
 routes.post('/files', upload.single('file'), FileController.store);
