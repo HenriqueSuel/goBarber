@@ -8,6 +8,7 @@ import ProviderController from './app/controllers/ProviderController';
 import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import AppointmentController from './app/controllers/AppointmentController';
+import SheduleController from './app/controllers/SheduleController';
 
 import authMiddlewares from './app/middlewares/auth';
 
@@ -30,6 +31,9 @@ routes.get('/providers', ProviderController.index);
 // Calendario
 routes.post('/appointments', AppointmentController.store);
 routes.get('/appointments', AppointmentController.index);
+
+// Calendario do prestador
+routes.get('/schedule', SheduleController.index);
 
 // Foto
 routes.post('/files', upload.single('file'), FileController.store);
