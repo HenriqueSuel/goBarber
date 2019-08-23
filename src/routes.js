@@ -12,6 +12,7 @@ import SheduleController from './app/controllers/SheduleController';
 import NotificationController from './app/controllers/NotificationController';
 
 import authMiddlewares from './app/middlewares/auth';
+import AvailableController from './app/controllers/AvailableController';
 
 const routes = new Router();
 const upload = multer(multerConfig);
@@ -28,6 +29,7 @@ routes.put('/users', UserController.update);
 
 // Providers
 routes.get('/providers', ProviderController.index);
+routes.get('/providers/:providerId/available', AvailableController.index);
 
 // Calendario
 routes.post('/appointments', AppointmentController.store);
