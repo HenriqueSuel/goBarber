@@ -1,9 +1,20 @@
 # goBarber
 
-Instalar as dependencias.
+## Instalar as dependencias.
 
-npm install
+```bash
+yarn
+```
+_(Durante o desenvolvimento foi utilizado o yarn como gerenciador de dependecias)_
 
-Rodar projeto
+## Rodar projeto
 
-yarn dev ou npm run dev
+```bash
+yarn dev
+```
+
+ou
+
+```bash
+npm run dev
+```
